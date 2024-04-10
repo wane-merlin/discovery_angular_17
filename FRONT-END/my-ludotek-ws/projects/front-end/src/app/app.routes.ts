@@ -5,6 +5,6 @@ export const routes: Routes = [
     {
         path: "books", 
         loadChildren: () => import('book-features').then(item => item.booksRoutes),
-        data : { preload:true }
+        data : { preload: true }
     }
 ];

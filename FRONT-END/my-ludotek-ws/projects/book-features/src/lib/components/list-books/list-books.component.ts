@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { GetAllBooksApplication } from '../../services/books.application';
 import { CommonModule } from '@angular/common';
+import { SearchStore } from 'search'
 
 @Component({
   selector: 'dtbc-list-books',
@@ -9,10 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './list-books.component.html',
   styleUrl: './list-books.component.css'
 })
-export class ListBooksComponent implements OnInit {
+export class ListBooksComponent  {
     books$ = inject(GetAllBooksApplication).getAll();
-
-    ngOnInit() {
-      
-    }
+    searchStore = inject(SearchStore).store 
 }

@@ -1,5 +1,7 @@
 <p>list-books works!</p>
 
+<h6>Recherche en cours  {{ searchStore().item }} </h6> 
+
 @for(book of books$ | async; track book.id){
     <div> 
         {{book.title}}

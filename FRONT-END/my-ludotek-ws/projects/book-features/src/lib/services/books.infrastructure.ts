@@ -2,12 +2,16 @@ import { Injectable } from "@angular/core";
 import { Observable, delay, of } from "rxjs";
 import { Books } from "../models";
 
+export interface BookFilter {
+    value: string
+}
+
 export interface GetAllBooks {
-    getAll(): Observable<Books>
+    getAll(filter: BookFilter): Observable<Books>
 }
 
 export const inMemoryGetAllBooks: GetAllBooks = {
-    getAll: () => {
+    getAll: (filter: BookFilter) => {
         const table: Books = [
             {
                 id: 1,
@@ -36,7 +40,7 @@ export const mockinFactory = () => inMemoryGetAllBooks
     useFactory: mockinFactory
 })
 export class GetAllBooksInfrastructure implements GetAllBooks{
-    getAll(): Observable<Books> {
+    getAll(filter: BookFilter): Observable<Books> {
         throw new Error("Method not implemented")
     }
 }

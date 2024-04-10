@@ -2,11 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "paths": {
-      "book-features": [
-        "./dist/book-features"
-      ]
-    },
+    "paths": {"book-features": ["./dist/book-features"]}, // library available as if i was available from npm i
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

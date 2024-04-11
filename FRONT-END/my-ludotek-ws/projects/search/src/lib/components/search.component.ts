@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule],
   template: `
     <p>
-        <input type="text" [(ngModel)]  = "item.value"    />
+        <input type="text" [(ngModel)]  = "item.value"/>
         <button (click)=search()>Search</button>
     </p>
   `,
